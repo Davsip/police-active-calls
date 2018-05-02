@@ -1,4 +1,5 @@
-var activeCalls = document.getElementById("calls"); // var  that points to the empty div 
+
+var activeCalls = document.getElementById("calls"); // var  that points towards the empty div 
 var btn = document.getElementById("btn");  // target the button with the id and store it in to a variable 
 
 btn.addEventListener('click', function() {   // add an Event listener and anonymous function 
@@ -16,10 +17,14 @@ btn.addEventListener('click', function() {   // add an Event listener and anonym
 
 function renderHTML(data)   {   // create and add html to the page 
    
-var htmlString = "";
+          var htmlString = ""; // empty string
   
-    
-    activeCalls.insertAdjacentHTML('beforeend', 'htmlString'); // add html to the page 
-    
+          for (i = 0; i < data.length; i++) {
+ 
+          htmlString += "<p>" + "<b>  Nature of call : </b>"+ data[i].nature_of_call + ".<b>|| Location: </b>" + data[i].location + ". <b>|| Time of the incident </b> " + data[i].date_time + ".</p>"; 
+          
+};
+     
+    activeCalls.insertAdjacentHTML('beforeend', htmlString); //  target the empty div (activeCalls),  //dom elemnt insertAdja.. 
+};
 
-}
